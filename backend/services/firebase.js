@@ -13,6 +13,7 @@ const serviceAccount = {
   token_uri: 'https://oauth2.googleapis.com/token',
 };
 
+
 // Local development fallback
 if (!admin.apps.length) {
   if (process.env.FIREBASE_PROJECT_ID) {
@@ -29,5 +30,7 @@ if (!admin.apps.length) {
 
 const db = admin.firestore();
 const auth = admin.auth();
+const newauth = admin.auth();
+
 
 module.exports = { db, auth, admin };
